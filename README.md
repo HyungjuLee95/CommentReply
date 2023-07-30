@@ -55,9 +55,13 @@ ajax json /
 
 목표 : 동기 통신을 이용하여 진행하며, model 객체에 각각의 값을 담아 뷰단으로 넘겨서 댓글 대댓글을 구현.
 
-#### DB 구조
+#### ERD 구조
 
 ![image](https://github.com/HyungjuLee95/CommentReply/assets/111270174/5438cb20-7a17-4360-b29e-cdf7c8cc40c1)
+
+
+#### 클래스 구성(controller, model, service)
+![image](https://github.com/HyungjuLee95/CommentReply/assets/111270174/f55046f9-b30a-4636-8a06-09c2e645219a)
 
 
 
