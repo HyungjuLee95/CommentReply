@@ -26,6 +26,7 @@
 			<list>
 				<value>classpath:jdbc/sqlMapper_board.xml</value>
 				<value>classpath:jdbc/sqlMapper_comments.xml</value>
+				<value>classpath:jdbc/sqlMapper_reply.xml</value>
 			</list>
 		</property>
 	</bean>

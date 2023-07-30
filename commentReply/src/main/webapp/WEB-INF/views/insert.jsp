@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+	language="java"%>
+<%@ page session="true"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>°Ô½Ã±ÛÀ» ÀÛ¼ºÇÏ¼¼¿ä</h1>
+<h1>ê²Œì‹œê¸€ì„ ìž‘ì„±í•˜ì„¸ìš”</h1>
 <form action="insertOK.do">
-<input type="text" name="b_title" placeholder="Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä">
-<input type="text" name="b_content" placeholder="³»¿ëÀ» ÀÛ¼ºÇØÁÖ¼¼¿ä">
+<input type="text" name="b_title" placeholder="ì œëª©ì„ ìž…ë ¥í•˜ì„¸ìš”">
+<input type="text" name="b_content" placeholder="ë‚´ìš©ì„ ìž‘ì„±í•´ì£¼ì„¸ìš”">
 <input type="hidden" name="b_user_id" value="HyungJul">
-<button type="submit">Á¦Ãâ</button>
+<button type="submit">ì œì¶œ</button>
 </form>
 
 </body>
