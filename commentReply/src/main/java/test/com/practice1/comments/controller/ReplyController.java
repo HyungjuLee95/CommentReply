@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,16 +11,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.extern.slf4j.Slf4j;
 import test.com.practice1.comments.model.commentsVO;
-import test.com.practice1.comments.service.CommentsService;
+import test.com.practice1.comments.service.ReplyService;
 
 @Controller
 @Slf4j
-public class CommentController {
-	@Autowired
-	CommentsService service;
+public class ReplyController {
 	
-		
-	@RequestMapping(value="/com_insertOK.do", method = RequestMethod.GET)
+	@Autowired
+	ReplyService service;
+	
+	@RequestMapping(value="/reply_insertOK.do", method = RequestMethod.GET)
 	public String com_insertOK(commentsVO vo) {
 		log.info("insert vo ..... {}", vo);
 		int result= service.insert(vo);
@@ -30,12 +29,13 @@ public class CommentController {
 	}
 	
 	
-	@RequestMapping(value="/com_deleteOK.do", method = RequestMethod.GET)
-	public String com_deleteOK(commentsVO vo) {
-		log.info("com_deleteOK vo ..... {}", vo);
+	@RequestMapping(value="/reply_deleteOK.do", method = RequestMethod.GET)
+	public String reply_deleteOK(commentsVO vo) {
+		log.info("reply_deleteOK vo ..... {}", vo);
 		int result= service.delete(vo);
 		return "redirect:selectOne.do?b_num="+vo.getC_r_posted_num();
 		
 	}
+
 
 }

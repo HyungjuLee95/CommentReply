@@ -21,7 +21,7 @@
 
 	<insert id="B_INSERT">
 		insert into board(b_num,b_title,b_content,b_user_id)
-		values(seq_board.nextval,#{b_title},#{b_content},#{b_user_id})
+		values(seq_board.nextval,#{b_title},#{b_content},'tester')
 	</insert>
 
 <!-- 	<update id="b_UPDATE"> -->

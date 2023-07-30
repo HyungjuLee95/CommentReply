@@ -8,7 +8,7 @@
 		resultType="test.com.practice1.comments.model.commentsVO">
 		SELECT *
 		FROM comment_reply
-		where c_r_posted_num=#{c_r_posted_num}
+		where c_r_posted_num=#{c_r_posted_num} and c_r_parent_com=0
 	</select>
 
 	<insert id="C_INSERT">
@@ -24,10 +24,9 @@
 <!-- 		WHERE num = #{num, jdbcType=VARCHAR} -->
 <!-- 	</update> -->
 
-<!-- 	<delete id="C_DELETE"> -->
-<!-- 		DELETE FROM SOMOIM_BOARD_COMMENTS -->
-<!-- 		WHERE (num = #{num, jdbcType=VARCHAR} AND som_board_num = #{som_board_num, -->
-<!-- 		jdbcType=VARCHAR}) -->
-<!-- 		OR PARENT_COM = #{num, jdbcType=VARCHAR} -->
-<!-- 	</delete> -->
+	<delete id="C_DELETE">
+		DELETE FROM comment_reply
+		WHERE (c_r_num = #{c_r_num, jdbcType=VARCHAR} AND c_r_posted_num = #{c_r_posted_num,
+		jdbcType=VARCHAR})
+	</delete>
 </mapper>
