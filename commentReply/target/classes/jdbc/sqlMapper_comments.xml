@@ -5,19 +5,16 @@
 
 <mapper namespace="test.com.practice1.comments">
 	<select id="C_SELECT_ALL"
-		resultType="test.com.practice1.comments.model.CommentsVO">
+		resultType="test.com.practice1.comments.model.commentsVO">
 		SELECT *
 		FROM comment_reply
 		where c_r_posted_num=#{c_r_posted_num}
 	</select>
 
-	<insert id="C_INSERT"
-		parameterType="test.com.practice1.comments.model.CommentsVO">
-		insert into somoim_board_comments (num, som_member_num,
-		content, good_count, som_board_num, som_comment_depth, somoim_num)
-		values (SEQ_SOMOIM_BOARD_COMMENTS.nextval, 1 , #{content,
-		jdbcType=VARCHAR
-		},0,#{som_board_num, jdbcType=VARCHAR}, 0, #{somoim_num})
+	<insert id="C_INSERT">
+		insert into comment_reply (c_r_num, c_r_posted_num,
+		c_r_comments, c_r_user_id,c_r_parent_com)
+		values (seq_comments.nextval, #{c_r_posted_num} , #{c_r_comments},'tester',0)
 	</insert>
 
 <!-- 	<update id="C_UPDATE"> -->
