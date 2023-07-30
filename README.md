@@ -53,5 +53,13 @@ ajax json /
                          댓글의 경우, '0'으로 세팅하고, 대댓글의 경우, 상위 댓글의 c_r_num이 세팅됩니다.<br>
      ---
 
-#### 목표 : 게시글 model을 통한 data 반환, 댓글과 대댓글 AJAX를 통한 DATA 반환
+목표 : 동기 통신을 이용하여 진행하며, model 객체에 각각의 값을 담아 뷰단으로 넘겨서 댓글 대댓글을 구현.
+
+#### DB 구조
+
+![image](https://github.com/HyungjuLee95/CommentReply/assets/111270174/5438cb20-7a17-4360-b29e-cdf7c8cc40c1)
+
+
+
+
      
